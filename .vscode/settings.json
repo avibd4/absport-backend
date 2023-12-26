@@ -1,0 +1,40 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#f7d2a1",
+        "activityBar.background": "#f7d2a1",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#0d9359",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "commandCenter.border": "#15202b99",
+        "sash.hoverBorder": "#f7d2a1",
+        "statusBar.background": "#f3bb72",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#efa443",
+        "statusBarItem.remoteBackground": "#f3bb72",
+        "statusBarItem.remoteForeground": "#15202b",
+        "titleBar.activeBackground": "#f3bb72",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveBackground": "#f3bb7299",
+        "titleBar.inactiveForeground": "#15202b99"
+    },
+    "peacock.color": "#f3bb72",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        ".vscode": true,
+        "bin": true,
+        "config": true,
+        "node_modules": true,
+        "public": true,
+        "**/package-lock.json": true,
+        "*.json": true,
+        "package-lock.json": true,
+        "**/*.json": true
+    },
+    "explorerExclude.backup": {}
+}
