@@ -1,6 +1,14 @@
 let controler_name = "blog";
 let object_name = "Blog";
 let objects_name = "blogs";
+const cloudinary = require('cloudinary').v2;
+
+
+cloudinary.config({ 
+    cloud_name: process.env.CLOUD_NAME, 
+    api_key: process.env.API_KEY, 
+    api_secret: process.env.API_SECRET 
+  });
 
 let Model = require(`../models/${object_name}`);
 
@@ -54,9 +62,9 @@ module.exports = {
 
             if(req.file !== undefined){
                 console.log(req.file)
-            //  data = await cloudinary.uploader.upload(req.file.path)
-            //   product_image = data.secure_url;
-                blog_title_image = `http://localhost:${process.env.PORT}/uploads/${req.file.filename}`
+             data = await cloudinary.uploader.upload(req.file.path)
+             blog_title_image = data.secure_url;
+               // blog_title_image = `http://localhost:${process.env.PORT}/uploads/${req.file.filename}`
             }
 
     // creating new model using the values from req.body
@@ -98,9 +106,9 @@ module.exports = {
             const fix_tags = JSON.parse(tags);
             let fixedImage = blog_title_image? blog_title_image : "";
             if(req.file !== undefined){
-                // data = await cloudinary.uploader.upload(req.file.path)
-                // req.body.product_image = data.secure_url;
-                fixedImage = `http://localhost:${process.env.PORT}/uploads/${req.file.filename}`
+                data = await cloudinary.uploader.upload(req.file.path)
+                fixedImage = data.secure_url;
+                //fixedImage = `http://localhost:${process.env.PORT}/uploads/${req.file.filename}`
                 }
             
             const updateBlog = {
